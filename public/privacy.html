@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy | Nexus Prime Holdings</title>
+    <style>
+        /* Copy the same CSS from index.html for consistency */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root { --primary: #00d4ff; --secondary: #ff006e; --accent: #ffbe0b; --dark: #0a0a0a; --light: #ffffff; }
+        body { font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif; background: var(--dark); color: var(--light); overflow-x: hidden; cursor: none; }
+        .cursor { width: 20px; height: 20px; border: 2px solid var(--primary); border-radius: 50%; position: fixed; pointer-events: none; transition: all 0.1s ease; z-index: 9999; mix-blend-mode: difference; }
+        .cursor-follower { width: 40px; height: 40px; border: 1px solid rgba(0, 212, 255, 0.3); border-radius: 50%; position: fixed; pointer-events: none; transition: all 0.3s ease; z-index: 9998; }
+        .cosmos-bg { position: fixed; width: 100%; height: 100%; top: 0; left: 0; z-index: -1; background: radial-gradient(ellipse at center, #0a0a0a 0%, #000 100%); }
+        nav { position: fixed; top: 0; width: 100%; padding: 30px 60px; z-index: 1000; backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); background: rgba(10, 10, 10, 0.3); }
+        .nav-inner { display: flex; justify-content: space-between; align-items: center; max-width: 1600px; margin: 0 auto; }
+        .logo { font-size: 20px; font-weight: 600; letter-spacing: 4px; background: linear-gradient(135deg, var(--primary), var(--secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .nav-menu { display: flex; gap: 40px; list-style: none; }
+        .nav-menu a { color: rgba(255, 255, 255, 0.7); text-decoration: none; font-size: 14px; letter-spacing: 1px; transition: all 0.3s ease; position: relative; }
+        .nav-menu a::after { content: ''; position: absolute; bottom: -5px; left: 0; width: 0; height: 2px; background: var(--primary); transition: width 0.3s ease; }
+        .nav-menu a:hover { color: var(--light); }
+        .nav-menu a:hover::after { width: 100%; }
+        .page-content { max-width: 900px; margin: 180px auto 60px; background: rgba(255,255,255,0.02); border-radius: 30px; padding: 60px 40px; box-shadow: 0 10px 40px rgba(0,212,255,0.03); }
+        h1 { font-size: 48px; margin-bottom: 30px; font-weight: 900; letter-spacing: -2px; }
+        h2 { font-size: 28px; margin-top: 40px; margin-bottom: 20px; font-weight: 700; }
+        p, li { color: rgba(255,255,255,0.8); font-size: 18px; line-height: 1.7; }
+        ul { margin-left: 20px; }
+        a.home-link { display: inline-block; margin-top: 40px; color: var(--primary); text-decoration: underline; font-size: 18px; }
+        footer { padding: 80px 60px 40px; background: rgba(0, 0, 0, 0.5); border-top: 1px solid rgba(255, 255, 255, 0.1); margin-top: 60px; }
+        .footer-bottom { text-align: center; padding-top: 40px; border-top: 1px solid rgba(255, 255, 255, 0.1); color: rgba(255, 255, 255, 0.4); font-size: 14px; }
+        @media (max-width: 1024px) { .page-content { margin: 120px 10px 40px; padding: 30px 10px; } nav { padding: 20px 20px; } }
+    </style>
+</head>
+<body>
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+    <div class="cosmos-bg"></div>
+    <nav>
+        <div class="nav-inner">
+            <div class="logo">NEXUS PRIME</div>
+            <ul class="nav-menu">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/product.html">Product</a></li>
+                <li><a href="/privacy.html">Privacy</a></li>
+                <li><a href="/terms.html">Terms</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="page-content">
+        <h1>Privacy Policy</h1>
+        <p>At Nexus Prime Holdings, your privacy is important to us. This Privacy Policy explains how we collect, use, and protect your information when you use our experimental AI-driven automation platform, Nexus.</p>
+        <h2>Information We Collect</h2>
+        <ul>
+            <li>Usage data and analytics for internal optimization</li>
+            <li>Contact information if you reach out to us</li>
+            <li>Technical data (browser, device, etc.) for performance analysis</li>
+        </ul>
+        <h2>How We Use Information</h2>
+        <ul>
+            <li>To improve and optimize our internal tools and analytics</li>
+            <li>To ensure the security and performance of our platform</li>
+            <li>To respond to inquiries and provide support</li>
+        </ul>
+        <h2>Data Security</h2>
+        <p>We implement industry-standard security measures to protect your data. However, as Nexus is strictly experimental and used for internal purposes, no method of transmission or storage is 100% secure.</p>
+        <h2>Third-Party Services</h2>
+        <p>Nexus may interact with third-party platforms for analytics and operational workflows. We do not sell or share your personal information for marketing purposes.</p>
+        <h2>Changes to This Policy</h2>
+        <p>This Privacy Policy may be updated periodically. Continued use of Nexus after changes constitutes acceptance of the new terms.</p>
+        <a href="/index.html" class="home-link">&larr; Back to Home</a>
+    </div>
+    <footer>
+        <div class="footer-bottom">
+            © 2025 Nexus Prime Holdings · www.holdsafe.co<br>
+            <small>Certain processes utilize AI for optimization and analysis</small>
+        </div>
+    </footer>
+    <script>
+        // Custom cursor logic (same as homepage)
+        const cursor = document.querySelector('.cursor');
+        const follower = document.querySelector('.cursor-follower');
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+            setTimeout(() => {
+                follower.style.left = e.clientX + 'px';
+                follower.style.top = e.clientY + 'px';
+            }, 100);
+        });
+    </script>
+</body>
+</html> 
