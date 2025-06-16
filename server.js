@@ -1,18 +1,17 @@
 const express = require('express');
+const app = express();
 const path = require('path');
 
-const app = express();
-const PORT = process.env.PORT || 3000;
-
-// Serve static files from the public directory
+// Serve static files from the "public" directory (if needed)
 app.use(express.static(path.join(__dirname, 'public')));
 
-// Catch-all route to support SPA routing
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+// Root route
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'index.html'));
 });
 
-// Start the server
+// ✅ FIX: Use Railway's dynamic port
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
-}); 
+  console.log(`✅ Server is running on port ${PORT}`);
+});
